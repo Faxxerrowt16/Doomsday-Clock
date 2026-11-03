@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Avengers: Doomsday — Countdown</title>
+<meta name="description" content="Avengers: Doomsday. In theaters December 18, 2026. Countdown to the end." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2306070a'/%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%23d81f2a' stroke-width='3'/%3E%3Cpath d='M32 12 L38 27 L54 27 L41 36 L46 52 L32 42 L18 52 L23 36 L10 27 L26 27 Z' fill='%23d81f2a'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="navbar" id="navbar">
+  <a class="brand" href="#home" aria-label="Avengers Doomsday home">
+    <span class="brand-mark" aria-hidden="true">
+      <img src="logo.png">
+      <svg viewBox="0 0 64 64" role="img">
+      </svg>
+    </span>
+    <span class="brand-text">
+      <strong>DOOMSDAY</strong>
+      <small>AVENGERS</small>
+    </span>
+  </a>
+
+  <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+    <a href="#home" class="nav-link active">Home</a>
+    <a href="#countdown" class="nav-link">Countdown</a>
+    <a href="#story" class="nav-link">Story</a>
+    <a href="#cast" class="nav-link">Cast</a>
+    <a href="#tickets" class="nav-link">Tickets</a>
+  </nav>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="hero-media" aria-hidden="true">
+      <img src="poster-hero.jpg" alt="" class="hero-poster" fetchpriority="high" />
+      <div class="hero-veil"></div>
+      <div class="hero-vignette"></div>
+    </div>
+
+    <canvas class="embers" id="embers" aria-hidden="true"></canvas>
+
+    <div class="hero-content">
+      <p class="eyebrow"><span class="line"></span>MARVEL STUDIOS<span class="line"></span></p>
+      <h1 class="hero-title">
+        <span class="title-top">AVENGERS</span>
+        <span class="title-main" data-text="DOOMSDAY">DOOMSDAY</span>
+      </h1>
+      <p class="hero-sub">The end was always coming. Now it has a face.</p>
+
+      <div class="hero-meta">
+        <span class="meta-item">IN THEATERS</span>
+        <span class="dot"></span>
+        <span class="meta-item accent">DECEMBER 18, 2026</span>
+        <span class="dot"></span>
+        <span class="meta-item">10:00 AM</span>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#countdown" class="btn btn-primary">
+          <span>Begin Countdown</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#story" class="btn btn-ghost">Watch the Story</a>
+      </div>
+    </div>
+
+    <a class="scroll-cue" href="#countdown" aria-label="Scroll to countdown">
+      <span></span>
+    </a>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>DOOM IS COMING</span><i>✦</i>
+      <span>DECEMBER 18 2026</span><i>✦</i>
+      <span>NO ONE IS SAFE</span><i>✦</i>
+      <span>THE MULTIVERSE BURNS</span><i>✦</i>
+      <span>DOOM IS COMING</span><i>✦</i>
+      <span>DECEMBER 18 2026</span><i>✦</i>
+      <span>NO ONE IS SAFE</span><i>✦</i>
+      <span>THE MULTIVERSE BURNS</span><i>✦</i>
+    </div>
+  </div>
+
+  <section class="countdown-section" id="countdown">
+    <div class="section-inner">
+      <p class="section-eyebrow">THE FINAL HOUR</p>
+      <h2 class="section-title">Countdown to <em>Doomsday</em></h2>
+      <p class="section-lead">December 18, 2026 — 10:00 AM. Every second brings the end closer.</p>
+
+      <div class="countdown" id="timer" data-target="2026-12-18T10:00:00">
+        <div class="time-box">
+          <div class="time-value"><span id="days">000</span></div>
+          <div class="time-label">Days</div>
+        </div>
+        <div class="time-sep" aria-hidden="true">:</div>
+        <div class="time-box">
+          <div class="time-value"><span id="hours">00</span></div>
+          <div class="time-label">Hours</div>
+        </div>
+        <div class="time-sep" aria-hidden="true">:</div>
+        <div class="time-box">
+          <div class="time-value"><span id="minutes">00</span></div>
+          <div class="time-label">Minutes</div>
+        </div>
+        <div class="time-sep" aria-hidden="true">:</div>
+        <div class="time-box">
+          <div class="time-value"><span id="seconds">00</span></div>
+          <div class="time-label">Seconds</div>
+        </div>
+      </div>
+
+      <p class="countdown-note" id="countdownNote">Tick. Tock.</p>
+
+      <div class="progress-wrap" aria-hidden="true">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story" id="story">
+    <div class="section-inner story-grid">
+      <div class="story-art reveal">
+        <div class="art-frame">
+          <img src="poster-card.jpg" alt="Avengers: Doomsday poster" loading="lazy" />
+          <span class="corner tl"></span>
+          <span class="corner tr"></span>
+          <span class="corner bl"></span>
+          <span class="corner br"></span>
+        </div>
+        <div class="art-glow" aria-hidden="true"></div>
+      </div>
+
+      <div class="story-copy reveal">
+        <p class="section-eyebrow">THE STORY</p>
+        <h2 class="section-title">When heroes fall, <em>Doom</em> rises.</h2>
+        <p>The Avengers have shattered. The multiverse is cracking open. From the wreckage of everything they fought for, a single armored will steps forward to claim what remains.</p>
+        <p>Earth's Mightiest Heroes must assemble one last time — not to win, but to survive. Every alliance will be tested. Every sacrifice will be counted. And at the center of it all, a ruler with a face they know all too well.</p>
+
+        <ul class="story-facts">
+          <li><span>Release</span><strong>December 18, 2026</strong></li>
+          <li><span>Premiere</span><strong>10:00 AM Local Time</strong></li>
+          <li><span>Studio</span><strong>Marvel Studios</strong></li>
+          <li><span>Format</span><strong>IMAX · Dolby · 3D</strong></li>
+        </ul>
+
+        <a href="#tickets" class="btn btn-primary">
+          <span>Get Tickets</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cast" id="cast">
+    <div class="section-inner">
+      <p class="section-eyebrow">ASSEMBLE</p>
+      <h2 class="section-title">The Last <em>Lineup</em></h2>
+      <p class="section-lead">The faces of the final chapter.</p>
+
+      <div class="cast-grid">
+        <article class="cast-card reveal">
+          <div class="cast-avatar doom">RDJ </div>
+          <img src="Cast photos/RDJ.jpg">
+          <h3>Robert Downey Jr.</h3>
+          <p>Doctor Doom</p>
+          <span class="cast-tag">Villain</span>
+        </article>
+        <article class="cast-card reveal">
+          <div class="cast-avatar">CH</div>
+          <h3>Chris Hemsworth</h3>
+          <img src="Cast photos/Chris Hemsworth.png">
+          <p>Thor</p>
+          <span class="cast-tag">Asgard</span>
+        </article>
+        <article class="cast-card reveal">
+          <div class="cast-avatar">AM</div>
+          <h3>Anthony Mackie</h3>
+          <p>Captain America</p>
+          <span class="cast-tag">Leader</span>
+        </article>
+        <article class="cast-card reveal">
+          <div class="cast-avatar">SS</div>
+          <h3>Sebastian Stan</h3>
+          <p>Bucky Barnes</p>
+          <span class="cast-tag">Winter Soldier</span>
+        </article>
+        <article class="cast-card reveal">
+          <div class="cast-avatar">PR</div>
+          <h3>Paul Rudd</h3>
+          <p>Ant-Man</p>
+          <span class="cast-tag">Quantum</span>
+        </article>
+        <article class="cast-card reveal">
+          <div class="cast-avatar">LW</div>
+          <h3>Letitia Wright</h3>
+          <p>Shuri</p>
+          <span class="cast-tag">Wakanda</span>
+        </article>
+        <article class="cast-card reveal">
+          <div class="cast-avatar">FP</div>
+          <h3>Florence Pugh</h3>
+          <p>Yelena Belova</p>
+          <span class="cast-tag">Thunderbolts</span>
+        </article>
+        <article class="cast-card reveal">
+          <div class="cast-avatar">SL</div>
+          <h3>Simu Liu</h3>
+          <p>Shang-Chi</p>
+          <span class="cast-tag">Ten Rings</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="tickets" id="tickets">
+    <div class="section-inner tickets-inner reveal">
+      <p class="section-eyebrow">TICKETS</p>
+      <h2 class="section-title">Witness the <em>End</em></h2>
+      <p class="section-lead">Reserve your seat before the world changes. Opening night — December 18, 2026, 10:00 AM.</p>
+
+      <form class="ticket-form" id="ticketForm" novalidate>
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="field">
+          <label for="seats">Seats</label>
+          <select id="seats" name="seats">
+            <option value="1">1 Seat</option>
+            <option value="2">2 Seats</option>
+            <option value="3">3 Seats</option>
+            <option value="4">4 Seats</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          <span>Reserve Seats</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <p class="form-msg" id="formMsg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <strong>AVENGERS: DOOMSDAY</strong>
+      <p>Fan-made concept site. Not affiliated with Marvel Studios or Disney.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#countdown">Countdown</a>
+      <a href="#cast">Cast</a>
+      <a href="#tickets">Tickets</a>
+    </div>
+    <p class="footer-copy">© <span id="year">2026</span> Doomsday Countdown. All rights reserved.</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
